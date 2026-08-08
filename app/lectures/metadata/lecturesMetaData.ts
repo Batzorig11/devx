@@ -1,0 +1,48 @@
+export const lecturesMetadatas = [
+  {
+    id: "lecture-01",
+    lectureNumber: "01",
+    title: "Веб хэрхэн ажилладаг вэ?",
+    description:
+      "Browser, server, HTTP, DNS болон “frontend” гэж яг юу болохыг ойлгох.",
+    estimatedMinutes: 160,
+    topics: ["Интернэт", "HTTP", "DNS", "Домэйн", "Хостинг", "Хөтөч"],
+    lecturePath: "/lectures/lecture-1",
+  },
+  {
+    id: "lecture-02",
+    lectureNumber: "02",
+    title: "Хөгжүүлэлтийн орчин бэлдэх",
+    description: "Terminal, Code Editor, VSCode, Folder vs file.",
+    estimatedMinutes: 160,
+    topics: ["Terminal", "Code Editor", "VSCode", "Folder", "File"],
+    lecturePath: "/lectures/lecture-2",
+  },
+  {
+    id: "lecture-03",
+    lectureNumber: "03",
+    title: "Хөгжүүлэлтийн орчин бэлдэх",
+    description: "Terminal, Code Editor, VSCode, Folder vs file.",
+    estimatedMinutes: 160,
+    topics: ["Terminal", "Code Editor", "VSCode", "Folder", "File"],
+    lecturePath: "/lectures/lecture-3",
+  },
+  {
+    id: "lecture-04",
+    lectureNumber: "04",
+    title: "Хөгжүүлэлтийн орчин бэлдэх",
+    description: "Terminal, Code Editor, VSCode, Folder vs file.",
+    estimatedMinutes: 160,
+    topics: ["Terminal", "Code Editor", "VSCode", "Folder", "File"],
+    lecturePath: "/lectures/lecture-4",
+  },
+  {
+    id: "lecture-05",
+    lectureNumber: "05",
+    title: "Хөгжүүлэлтийн орчин бэлдэх",
+    description: "Terminal, Code Editor, VSCode, Folder vs file.",
+    estimatedMinutes: 160,
+    topics: ["Terminal", "Code Editor", "VSCode", "Folder", "File"],
+    lecturePath: "/lectures/lecture-5",
+  },
+];
