@@ -1,6 +1,14 @@
-export const lecturesMetadatas = [
+export const lecturesMetadatas = [{
+  id: "lesson-00",
+  lectureNumber: "00",
+  title: "Танилцуулга хичээл",
+  description:
+    "Хөтөлбөрийн танилцуулга, хичээлийн дүрэм, ice-breaking.",
+  estimatedMinutes: 160,
+  topics: ["Дүрэм", "ice-breaking", "Танилцуулга"],
+  lecturePath: "/lectures/lecture-0",},
   {
-    id: "lecture-01",
+    id: "lesson-01",
     lectureNumber: "01",
     title: "Веб хэрхэн ажилладаг вэ?",
     description:
@@ -10,7 +18,7 @@ export const lecturesMetadatas = [
     lecturePath: "/lectures/lecture-1",
   },
   {
-    id: "lecture-02",
+    id: "lesson-02",
     lectureNumber: "02",
     title: "Хөгжүүлэлтийн орчин бэлдэх",
     description: "Terminal, Code Editor, VSCode, Folder vs file.",
@@ -19,7 +27,7 @@ export const lecturesMetadatas = [
     lecturePath: "/lectures/lecture-2",
   },
   {
-    id: "lecture-03",
+    id: "lesson-03",
     lectureNumber: "03",
     title: "Хөгжүүлэлтийн орчин бэлдэх",
     description: "Terminal, Code Editor, VSCode, Folder vs file.",
@@ -28,7 +36,7 @@ export const lecturesMetadatas = [
     lecturePath: "/lectures/lecture-3",
   },
   {
-    id: "lecture-04",
+    id: "lesson-04",
     lectureNumber: "04",
     title: "Хөгжүүлэлтийн орчин бэлдэх",
     description: "Terminal, Code Editor, VSCode, Folder vs file.",
@@ -37,7 +45,7 @@ export const lecturesMetadatas = [
     lecturePath: "/lectures/lecture-4",
   },
   {
-    id: "lecture-05",
+    id: "lesson-05",
     lectureNumber: "05",
     title: "Хөгжүүлэлтийн орчин бэлдэх",
     description: "Terminal, Code Editor, VSCode, Folder vs file.",
