@@ -1,7 +1,6 @@
 import { LectureCard } from "@/components/lecture-card";
 import { Container } from "@/components/ui/container";
 import { Title } from "@/components/ui/title";
-
 import { lecturesMetadatas } from "@/app/lectures/metadata/lecturesMetaData";
 
 export default function Home() {
