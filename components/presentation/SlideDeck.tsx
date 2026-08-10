@@ -1,15 +1,65 @@
 "use client";
 
-import { Children, type ReactNode, useState } from "react";
+import { Children, type ReactNode, useEffect, useState } from "react";
+
+import { cn } from "@/lib/utils";
+
 import { Button } from "../ui/button";
 
 type SlideDeckProps = {
   children: ReactNode;
+  className?: string;
+  navigationClassName?: string;
+  previousLabel?: ReactNode;
+  nextLabel?: ReactNode;
 };
 
-export function SlideDeck({ children }: SlideDeckProps) {
+export function SlideDeck({
+  children,
+  className,
+  navigationClassName,
+  previousLabel = "← Previous",
+  nextLabel = "Next →",
+}: SlideDeckProps) {
   const slides = Children.toArray(children);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.altKey || event.ctrlKey || event.metaKey) {
+        return;
+      }
+
+      const target = event.target;
+      if (target instanceof HTMLElement && (target.isContentEditable || target.matches("input, textarea, select"))) {
+        return;
+      }
+
+      switch (event.key) {
+        case "ArrowLeft":
+        case "PageUp":
+          event.preventDefault();
+          setCurrentIndex((index) => Math.max(index - 1, 0));
+          break;
+        case "ArrowRight":
+        case "PageDown":
+          event.preventDefault();
+          setCurrentIndex((index) => Math.min(index + 1, slides.length - 1));
+          break;
+        case "Home":
+          event.preventDefault();
+          setCurrentIndex(0);
+          break;
+        case "End":
+          event.preventDefault();
+          setCurrentIndex(slides.length - 1);
+          break;
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [slides.length]);
 
   if (slides.length === 0) {
     return null;
@@ -24,20 +74,36 @@ export function SlideDeck({ children }: SlideDeckProps) {
   }
 
   return (
-    <section>
+    <section className={cn("relative min-h-dvh", className)}>
       {slides[currentIndex]}
 
-      <nav aria-label="Slide navigation" className="absolute w-full p-10 flex bottom-0 items-center justify-between">
+      <nav
+        aria-label="Slide navigation"
+        className={cn(
+          "fixed inset-x-0 bottom-0 z-50 flex w-full items-center justify-between px-4 py-4 md:px-8",
+          navigationClassName,
+        )}
+      >
+        <span className="sr-only">
+          Use Left Arrow or Page Up for the previous slide, Right Arrow or Page Down for the next slide, Home for the
+          first slide, and End for the last slide.
+        </span>
         <Button
           type="button"
           onClick={showPreviousSlide}
           disabled={currentIndex === 0}
-          className="rounded-lg bg-slate-900 px-5 py-2.5 text-white disabled:cursor-not-allowed disabled:opacity-40"
+          aria-keyshortcuts="ArrowLeft PageUp"
+          className="w-30 pointer-events-auto h-11 rounded-none border-[3px] border-black bg-[#fffdf5] px-4 font-mono text-xs font-black uppercase text-black shadow-[4px_4px_0_#111] transition-transform active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-40"
         >
-          ← Previous
+          {previousLabel}
         </Button>
 
-        <p className="text-sm font-medium text-slate-600">
+        <p
+          aria-live="polite"
+          aria-atomic="true"
+          data-presentation="slide-counter"
+          className="border-[3px] border-black bg-[#ffe75c] px-3 py-2 font-mono text-xs font-black text-black shadow-[3px_3px_0_#111]"
+        >
           {currentIndex + 1} / {slides.length}
         </p>
 
@@ -45,9 +111,10 @@ export function SlideDeck({ children }: SlideDeckProps) {
           type="button"
           onClick={showNextSlide}
           disabled={currentIndex === slides.length - 1}
-          className="rounded-lg bg-slate-900 px-5 py-2.5 text-white disabled:cursor-not-allowed disabled:opacity-40"
+          aria-keyshortcuts="ArrowRight PageDown"
+          className="w-30 pointer-events-auto h-11 rounded-none border-[3px] border-black bg-[#fffdf5] px-4 font-mono text-xs font-black uppercase text-black shadow-[4px_4px_0_#111] transition-transform active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-40"
         >
-          Next →
+          {nextLabel}
         </Button>
       </nav>
     </section>

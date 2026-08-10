@@ -1,11 +1,19 @@
-import { ReactNode } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
-export function Eyebrow({ children, className = "bg-[#ffe75c]" }: { children: ReactNode; className?: string }) {
+import { cn } from "@/lib/utils";
+
+export function Eyebrow({
+  className,
+  ...props
+}: ComponentPropsWithoutRef<"span">) {
   return (
     <span
-      className={`inline-flex w-fit items-center gap-2 border-[3px] border-black px-3 py-1 font-mono text-xs font-black uppercase tracking-[0.14em] shadow-[3px_3px_0_#111] ${className}`}
-    >
-      {children}
-    </span>
+      data-presentation="eyebrow"
+      className={cn(
+        "inline-flex w-fit items-center gap-2 border-[3px] border-black bg-[#ffe75c] px-3 py-1 font-mono text-xs font-black uppercase tracking-[0.14em] text-black shadow-[3px_3px_0_#111]",
+        className,
+      )}
+      {...props}
+    />
   );
 }

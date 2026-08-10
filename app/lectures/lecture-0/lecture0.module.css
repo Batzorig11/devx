@@ -1,0 +1,113 @@
+.theme {
+  --lecture-ink: #0a1e41;
+  --lecture-accent: #6569df;
+  --lecture-paper: #efeee8;
+  --lecture-surface: #fffdf5;
+
+  color: var(--lecture-ink);
+}
+
+/* Minimal palette; strong outlines and hard shadows preserve the neo-brutalist voice. */
+.theme :global(.text-black) {
+  color: var(--lecture-ink);
+}
+
+.theme :global(.border-black),
+.theme :global([class~="border-[#0A1E41]"]),
+.theme :global([class~="border-[#5b8cff]"]),
+.theme :global([class~="border-l-[#5b8cff]"]),
+.theme :global([class~="border-[#6569DF]"]),
+.theme :global([class~="border-[#ff5c5c]"]),
+.theme :global([class~="border-l-[#ff5c5c]"]),
+.theme :global([class~="border-[#ffe75c]"]),
+.theme :global([class~="border-l-[#ffe75c]"]),
+.theme :global([class~="border-[#5de2a5]"]),
+.theme :global([class~="border-l-[#5de2a5]"]) {
+  border-color: var(--lecture-ink);
+}
+
+.theme :global([class~="bg-[#efeee8]"]) {
+  background-color: var(--lecture-paper);
+  color: var(--lecture-ink);
+}
+
+.theme :global([class~="bg-[#fffdf5]"]),
+.theme :global([class~="bg-[#ff5c5c]"]),
+.theme :global([class~="bg-[#6569DF]"]),
+.theme :global([class~="bg-[#ffe75c]"]),
+.theme :global([class~="bg-[#5de2a5]"]),
+.theme :global([class~="bg-[#dce6ff]"]) {
+  background-color: var(--lecture-surface);
+  color: var(--lecture-ink);
+}
+
+.theme :global([class~="bg-[#5b8cff]"]) {
+  background-color: var(--lecture-accent);
+  color: #fffdf5;
+}
+
+.theme :global(.bg-black),
+.theme :global([class~="bg-[#1c1c1c]"]),
+.theme :global([class~="bg-[#111111]"]),
+.theme :global([class~="bg-[#0A1E41]"]) {
+  background-color: var(--lecture-ink);
+  color: #fffdf5;
+}
+
+.theme :global([class~="bg-[#5b8cff]"][class~="text-black"]:not([data-presentation])) {
+  color: #fffdf5;
+}
+
+.theme :global([class~="text-[#5b8cff]"]),
+.theme :global([class~="text-[#6569DF]"]) {
+  color: var(--lecture-accent);
+}
+
+.theme :global([class~="text-[#ff5c5c]"]),
+.theme :global([class~="text-[#ffe75c]"]),
+.theme :global([class~="text-[#2452ad]"]),
+.theme :global([class~="text-[#5de2a5]"]) {
+  color: var(--lecture-ink);
+}
+
+.theme :global([class*="shadow-["]) {
+  box-shadow: 5px 5px 0 var(--lecture-ink);
+}
+
+.theme :global([class*="background-image:radial-gradient"]) {
+  background-image: radial-gradient(circle, rgb(10 30 65 / 8%) 1px, transparent 1px);
+}
+
+.theme :global([class~="focus-visible:ring-[#ff5c5c]"]) {
+  --tw-ring-color: var(--lecture-accent);
+}
+
+/* Compact markers concentrate the single accent color. */
+.theme :global([data-presentation="eyebrow"]),
+.theme :global([data-presentation="slide-counter"]),
+.theme :global([data-presentation="action-label"]) {
+  border-color: var(--lecture-ink);
+  background-color: var(--lecture-accent);
+  color: #fffdf5;
+}
+
+.theme :global([data-presentation="tag"]),
+.theme :global([data-presentation="avatar-badge"]) {
+  border-color: var(--lecture-accent);
+  background-color: var(--lecture-surface);
+  color: var(--lecture-ink);
+}
+
+.theme :global([data-presentation="status-dot"]) {
+  background-color: var(--lecture-accent);
+}
+
+.theme :global([data-presentation="label-danger"]),
+.theme :global([data-presentation="label-success"]),
+.theme :global([data-presentation="label-warning"]) {
+  color: #fffdf5;
+}
+
+.theme :global([data-presentation="label-success"][class~="text-black"]) {
+  color: var(--lecture-ink);
+}
