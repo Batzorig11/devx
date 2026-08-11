@@ -1,4 +1,4 @@
-export { WelcomeSlide } from "./01-welcome";
+// export { WelcomeSlide } from "./01-welcome";
 export { AboutMeSlide } from "./02-about-me";
 export { CourseContextSlide } from "./03-course-context";
 export { ProgramSlide } from "./04-program";
