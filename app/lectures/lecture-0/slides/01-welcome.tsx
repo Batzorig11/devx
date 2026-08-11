@@ -10,7 +10,6 @@ export function WelcomeSlide() {
       lectureNumber={0}
       title="Тавтай морил"
       highlightedTitle="DevX"
-      subtitle="erxes Academy"
     />
   );
 }
