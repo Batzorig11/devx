@@ -13,7 +13,7 @@ import {
   ProgramSlide,
   SoftwareEngineerAdvantagesSlide,
   WhyDevxSlide,
-  WelcomeSlide,
+  // WelcomeSlide,
 } from "./slides";
 import styles from "./lecture0.module.css";
 
@@ -23,7 +23,7 @@ export function Lecture0() {
       className={`${styles.theme} min-h-dvh bg-presentation-paper font-sans selection:bg-presentation-accent selection:text-presentation-surface`}
     >
       <SlideDeck>
-        <WelcomeSlide />
+        {/*<WelcomeSlide />*/}
         <AboutMeSlide />
         <CourseContextSlide />
         <ProgramSlide />
