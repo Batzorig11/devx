@@ -23,7 +23,7 @@ export default function SlideHeader({
     <div
       className={cn(
         "relative z-20 mb-5 flex items-center justify-between border-b-[3px] pb-3 font-mono text-xs font-black uppercase tracking-[0.18em] md:text-sm",
-        tone === "ink" ? "border-[#fffdf5]" : "border-black",
+        tone === "ink" ? "border-presentation-surface" : "border-presentation-ink",
         className,
       )}
     >

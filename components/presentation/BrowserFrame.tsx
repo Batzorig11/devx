@@ -31,15 +31,15 @@ export function BrowserFrame({
     >
       <div
         className={cn(
-          "flex items-center gap-2 border-b-[3px] border-black px-4 py-3",
+          "flex items-center gap-2 border-b-[3px] border-presentation-ink px-4 py-3",
           toolbarClassName,
         )}
       >
         {showDots && (
           <>
-            <StatusDot className="bg-[#ff5c5c]" />
-            <StatusDot className="bg-[#ffe75c]" />
-            <StatusDot className="bg-[#5de2a5]" />
+            <StatusDot />
+            <StatusDot />
+            <StatusDot />
           </>
         )}
         {title && (

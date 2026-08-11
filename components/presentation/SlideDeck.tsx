@@ -74,7 +74,12 @@ export function SlideDeck({
   }
 
   return (
-    <section className={cn("relative min-h-dvh", className)}>
+    <section
+      className={cn(
+        "relative min-h-dvh bg-presentation-paper text-presentation-ink selection:bg-presentation-accent selection:text-presentation-surface",
+        className,
+      )}
+    >
       {slides[currentIndex]}
 
       <nav
@@ -93,7 +98,7 @@ export function SlideDeck({
           onClick={showPreviousSlide}
           disabled={currentIndex === 0}
           aria-keyshortcuts="ArrowLeft PageUp"
-          className="w-30 pointer-events-auto h-11 rounded-none border-[3px] border-black bg-[#fffdf5] px-4 font-mono text-xs font-black uppercase text-black shadow-[4px_4px_0_#111] transition-transform active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-40"
+          className="w-30 pointer-events-auto h-11 rounded-none border-[3px] border-presentation-ink bg-presentation-surface px-4 font-mono text-xs font-black uppercase text-presentation-ink shadow-[4px_4px_0_var(--presentation-ink)] transition-transform active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-40"
         >
           {previousLabel}
         </Button>
@@ -102,7 +107,7 @@ export function SlideDeck({
           aria-live="polite"
           aria-atomic="true"
           data-presentation="slide-counter"
-          className="border-[3px] border-black bg-[#ffe75c] px-3 py-2 font-mono text-xs font-black text-black shadow-[3px_3px_0_#111]"
+          className="border-[3px] border-presentation-ink bg-presentation-accent px-3 py-2 font-mono text-xs font-black text-presentation-surface shadow-[3px_3px_0_var(--presentation-ink)]"
         >
           {currentIndex + 1} / {slides.length}
         </p>
@@ -112,7 +117,7 @@ export function SlideDeck({
           onClick={showNextSlide}
           disabled={currentIndex === slides.length - 1}
           aria-keyshortcuts="ArrowRight PageDown"
-          className="w-30 pointer-events-auto h-11 rounded-none border-[3px] border-black bg-[#fffdf5] px-4 font-mono text-xs font-black uppercase text-black shadow-[4px_4px_0_#111] transition-transform active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-40"
+          className="w-30 pointer-events-auto h-11 rounded-none border-[3px] border-presentation-ink bg-presentation-surface px-4 font-mono text-xs font-black uppercase text-presentation-ink shadow-[4px_4px_0_var(--presentation-ink)] transition-transform active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-40"
         >
           {nextLabel}
         </Button>

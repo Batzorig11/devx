@@ -64,15 +64,9 @@ export default function SlideDemoPage() {
           label="Cover option A · Ticket"
           title="Веб хэрхэн"
           highlightedTitle="ажилладаг вэ?"
-          subtitle="Нэг click-ийн цаадах аяллыг мөрдөнө."
         />
 
-        <Slide
-          number="02"
-          label="Cover option B · Boot"
-          totalSlides={totalSlides}
-          tone="ink"
-        >
+        <Slide number="02" label="Cover option B · Boot" totalSlides={totalSlides} tone="ink">
           <div className="pointer-events-none absolute -right-6 top-20 hidden font-mono text-[22rem] font-black leading-none text-transparent [-webkit-text-stroke:3px_#5b8cff] opacity-35 lg:block">
             00
           </div>
@@ -101,10 +95,18 @@ export default function SlideDemoPage() {
               bodyClassName="bg-[#111] p-5 text-[#fffdf5]"
             >
               <div className="space-y-4 font-mono text-xs font-bold md:text-sm">
-                <p><span className="text-[#5de2a5]">[01]</span> loading curiosity...</p>
-                <p><span className="text-[#ffe75c]">[02]</span> connecting browser...</p>
-                <p><span className="text-[#ff5c5c]">[03]</span> finding the server...</p>
-                <p><span className="text-[#5b8cff]">[04]</span> decoding the web...</p>
+                <p>
+                  <span className="text-[#5de2a5]">[01]</span> loading curiosity...
+                </p>
+                <p>
+                  <span className="text-[#ffe75c]">[02]</span> connecting browser...
+                </p>
+                <p>
+                  <span className="text-[#ff5c5c]">[03]</span> finding the server...
+                </p>
+                <p>
+                  <span className="text-[#5b8cff]">[04]</span> decoding the web...
+                </p>
                 <div className="border-y border-zinc-700 py-4">
                   <p className="text-zinc-400">MISSION</p>
                   <p className="mt-2 text-xl font-black text-[#fffdf5] md:text-2xl">
@@ -120,11 +122,7 @@ export default function SlideDemoPage() {
           </div>
         </Slide>
 
-        <Slide
-          number="03"
-          label="Cover option C · Course file"
-          totalSlides={totalSlides}
-        >
+        <Slide number="03" label="Cover option C · Course file" totalSlides={totalSlides}>
           <div className="grid flex-1 items-center px-0 md:px-8">
             <div className="relative mx-auto w-full max-w-6xl pt-8">
               <div className="absolute left-0 top-0 flex items-center gap-2 border-[3px] border-b-0 border-black bg-[#ffe75c] px-5 py-2 font-mono text-xs font-black">
@@ -161,7 +159,10 @@ export default function SlideDemoPage() {
                   </div>
                   <div className="grid grid-cols-4 gap-2 font-mono text-[10px] font-black sm:text-xs">
                     {["BROWSER", "DNS", "HTTP", "SERVER"].map((topic, index) => (
-                      <span key={topic} className={`border-[3px] border-black p-2 text-center ${index === 0 ? "bg-[#5b8cff]" : "bg-[#fffdf5]"}`}>
+                      <span
+                        key={topic}
+                        className={`border-[3px] border-black p-2 text-center ${index === 0 ? "bg-[#5b8cff]" : "bg-[#fffdf5]"}`}
+                      >
                         {topic}
                       </span>
                     ))}
@@ -170,7 +171,10 @@ export default function SlideDemoPage() {
 
                 <div className="absolute -right-3 top-[24%] hidden translate-x-full flex-col gap-2 lg:flex">
                   {["ASK", "TRACE", "BUILD"].map((tab, index) => (
-                    <span key={tab} className={`border border-l-0 border-black px-3 py-3 font-mono text-[10px] font-black [writing-mode:vertical-rl] ${index === 0 ? "bg-[#ff5c5c]" : index === 1 ? "bg-[#5b8cff]" : "bg-[#5de2a5]"}`}>
+                    <span
+                      key={tab}
+                      className={`border border-l-0 border-black px-3 py-3 font-mono text-[10px] font-black [writing-mode:vertical-rl] ${index === 0 ? "bg-[#ff5c5c]" : index === 1 ? "bg-[#5b8cff]" : "bg-[#5de2a5]"}`}
+                    >
                       {tab}
                     </span>
                   ))}
@@ -192,8 +196,7 @@ export default function SlideDemoPage() {
                 <br />1 attitude.
               </h2>
               <p className="mt-5 max-w-lg text-lg font-bold md:text-xl">
-                Тод өнгө бүр үүрэгтэй: анхаарал, амжилт, хөдөлгөөн, суурь,
-                контраст.
+                Тод өнгө бүр үүрэгтэй: анхаарал, амжилт, хөдөлгөөн, суурь, контраст.
               </p>
             </div>
 
@@ -240,9 +243,7 @@ export default function SlideDemoPage() {
                 <BrutalButton className="justify-between">
                   Start building <ArrowUpRight className="size-5" aria-hidden="true" />
                 </BrutalButton>
-                <BrutalButton className="bg-[#fffdf5] shadow-none">
-                  View notes
-                </BrutalButton>
+                <BrutalButton className="bg-[#fffdf5] shadow-none">View notes</BrutalButton>
                 <div className="flex items-center gap-2 font-mono text-xs font-black">
                   <BrutalTag>LIVE</BrutalTag>
                   24 people watching
@@ -253,7 +254,9 @@ export default function SlideDemoPage() {
             <BrutalCard className="p-4">
               <p className="font-mono text-xs font-black uppercase">Form controls</p>
               <div className="mt-5 space-y-3">
-                <div className="border-[3px] border-black bg-white px-3 py-3 font-mono text-sm text-zinc-500">type your idea...</div>
+                <div className="border-[3px] border-black bg-white px-3 py-3 font-mono text-sm text-zinc-500">
+                  type your idea...
+                </div>
                 <div className="flex items-center justify-between border-[3px] border-black bg-[#ff5c5c] px-3 py-2 font-bold">
                   Bold mode
                   <span className="flex h-7 w-12 justify-end border-[3px] border-black bg-[#5de2a5] p-0.5">
@@ -261,9 +264,15 @@ export default function SlideDemoPage() {
                   </span>
                 </div>
                 <div className="flex gap-2">
-                  <span className="grid size-7 place-items-center border-[3px] border-black bg-[#5b8cff]"><Check className="size-4" /></span>
-                  <span className="grid size-7 place-items-center rounded-full border-[3px] border-black bg-white"><span className="size-2 rounded-full bg-black" /></span>
-                  <span className="grid size-7 place-items-center border-[3px] border-black bg-white"><X className="size-4" /></span>
+                  <span className="grid size-7 place-items-center border-[3px] border-black bg-[#5b8cff]">
+                    <Check className="size-4" />
+                  </span>
+                  <span className="grid size-7 place-items-center rounded-full border-[3px] border-black bg-white">
+                    <span className="size-2 rounded-full bg-black" />
+                  </span>
+                  <span className="grid size-7 place-items-center border-[3px] border-black bg-white">
+                    <X className="size-4" />
+                  </span>
                 </div>
               </div>
             </BrutalCard>
@@ -290,7 +299,9 @@ export default function SlideDemoPage() {
             <BrutalCard className="p-4">
               <p className="font-mono text-xs font-black uppercase">Alert stack</p>
               <div className="mt-5 space-y-3 text-sm font-bold">
-                <Callout icon={<CheckCircle2 className="size-5" />} className="bg-[#5de2a5]">Idea published.</Callout>
+                <Callout icon={<CheckCircle2 className="size-5" />} className="bg-[#5de2a5]">
+                  Idea published.
+                </Callout>
                 <Callout icon={<Zap className="size-5" />}>3 decisions waiting.</Callout>
                 <div className="flex gap-2 border border-dashed border-black p-3 font-mono text-xs">
                   <span className="font-black">TIP:</span> keep labels short.
@@ -307,7 +318,9 @@ export default function SlideDemoPage() {
                 <BarChart3 className="size-4" aria-hidden="true" />
                 Live dashboard
               </Eyebrow>
-              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.05em] md:text-7xl">Numbers need a punchline.</h2>
+              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.05em] md:text-7xl">
+                Numbers need a punchline.
+              </h2>
             </div>
           </div>
 
@@ -347,7 +360,9 @@ export default function SlideDemoPage() {
               </BrutalCard>
               <div className="border-[3px] border-black bg-black p-4 text-[#fffdf5] shadow-[7px_7px_0_#ffe75c]">
                 <p className="font-mono text-xs font-black text-[#ff5c5c]">INSIGHT_01</p>
-                <p className="mt-3 text-2xl font-black leading-tight">Peak нь launch өдөр биш, demo хийсэн өдөр иржээ.</p>
+                <p className="mt-3 text-2xl font-black leading-tight">
+                  Peak нь launch өдөр биш, demo хийсэн өдөр иржээ.
+                </p>
               </div>
             </div>
           </div>
@@ -360,8 +375,14 @@ export default function SlideDemoPage() {
                 <Rocket className="size-4" aria-hidden="true" />
                 5-day sprint
               </Eyebrow>
-              <h2 className="mt-5 text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] md:text-7xl">Roadmap биш.<br />Relay race.</h2>
-              <p className="mt-5 max-w-md text-lg font-bold">Өдөр бүр нэг тодорхой output дараагийн өдрийн input болно.</p>
+              <h2 className="mt-5 text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] md:text-7xl">
+                Roadmap биш.
+                <br />
+                Relay race.
+              </h2>
+              <p className="mt-5 max-w-md text-lg font-bold">
+                Өдөр бүр нэг тодорхой output дараагийн өдрийн input болно.
+              </p>
             </div>
 
             <div className="relative grid gap-3 md:grid-cols-5">
@@ -373,11 +394,18 @@ export default function SlideDemoPage() {
                 ["THU", "BUILD", "Fake биш, үнэмшилтэй demo", "bg-[#ff5c5c]"],
                 ["FRI", "LEARN", "5 хүнээр туршиж шийд", "bg-[#fffdf5]"],
               ].map(([day, action, text, color], index) => (
-                <BrutalCard key={day} shadow="sm" className={`relative z-10 p-3 ${color} ${index % 2 ? "md:translate-y-10" : "md:-translate-y-10"}`}>
+                <BrutalCard
+                  key={day}
+                  shadow="sm"
+                  className={`relative z-10 p-3 ${color} ${index % 2 ? "md:translate-y-10" : "md:-translate-y-10"}`}
+                >
                   <div className="flex items-center justify-between font-mono text-xs font-black">
-                    <span>{day}</span><span>{index + 1}</span>
+                    <span>{day}</span>
+                    <span>{index + 1}</span>
                   </div>
-                  <div className="my-5 grid size-12 place-items-center rounded-full border-[3px] border-black bg-black text-[#fffdf5] text-lg font-black">{action.slice(0, 1)}</div>
+                  <div className="my-5 grid size-12 place-items-center rounded-full border-[3px] border-black bg-black text-[#fffdf5] text-lg font-black">
+                    {action.slice(0, 1)}
+                  </div>
                   <p className="text-xl font-black">{action}</p>
                   <p className="mt-2 text-sm font-bold leading-tight">{text}</p>
                 </BrutalCard>
@@ -390,23 +418,35 @@ export default function SlideDemoPage() {
           <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
             <div>
               <Eyebrow className="bg-[#fffdf5]">Feature architecture</Eyebrow>
-              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.05em] md:text-7xl">Show the whole system.</h2>
+              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.05em] md:text-7xl">
+                Show the whole system.
+              </h2>
             </div>
-            <div className="border-[3px] border-black bg-[#ffe75c] px-4 py-2 font-mono text-xs font-black shadow-[4px_4px_0_#111]">MVP ≠ SMALL VISION</div>
+            <div className="border-[3px] border-black bg-[#ffe75c] px-4 py-2 font-mono text-xs font-black shadow-[4px_4px_0_#111]">
+              MVP ≠ SMALL VISION
+            </div>
           </div>
 
           <div className="grid flex-1 grid-cols-2 gap-3 md:grid-cols-4 md:grid-rows-2">
             <BrutalCard className="col-span-2 flex flex-col justify-between p-5 md:row-span-2">
               <div className="flex items-start justify-between">
                 <Target className="size-10" strokeWidth={3} />
-                <span className="border-[3px] border-black bg-[#ff5c5c] px-2 py-1 font-mono text-xs font-black">CORE</span>
+                <span className="border-[3px] border-black bg-[#ff5c5c] px-2 py-1 font-mono text-xs font-black">
+                  CORE
+                </span>
               </div>
               <div>
                 <p className="text-4xl font-black uppercase md:text-6xl">One shared truth.</p>
-                <p className="mt-3 max-w-lg text-lg font-bold">Багийн санаа, шийдвэр, дараагийн алхам нэг canvas дээр амьдарна.</p>
+                <p className="mt-3 max-w-lg text-lg font-bold">
+                  Багийн санаа, шийдвэр, дараагийн алхам нэг canvas дээр амьдарна.
+                </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2 font-mono text-xs font-black">
-                {['REAL-TIME', 'VERSIONED', 'SEARCHABLE'].map((tag) => <span key={tag} className="border-[3px] border-black bg-[#5de2a5] px-2 py-1">{tag}</span>)}
+                {["REAL-TIME", "VERSIONED", "SEARCHABLE"].map((tag) => (
+                  <span key={tag} className="border-[3px] border-black bg-[#5de2a5] px-2 py-1">
+                    {tag}
+                  </span>
+                ))}
               </div>
             </BrutalCard>
             <BrutalCard shadow="sm" className="bg-[#ffe75c] p-4">
@@ -432,19 +472,16 @@ export default function SlideDemoPage() {
           </div>
         </Slide>
 
-        <Slide
-          number="09"
-          label="Technical story"
-          totalSlides={totalSlides}
-          tone="ink"
-        >
+        <Slide number="09" label="Technical story" totalSlides={totalSlides} tone="ink">
           <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
             <div>
               <Eyebrow className="bg-[#5de2a5] text-black">
                 <Code2 className="size-4" aria-hidden="true" />
                 Build log
               </Eyebrow>
-              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.05em] md:text-7xl">Code can tell a story.</h2>
+              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.05em] md:text-7xl">
+                Code can tell a story.
+              </h2>
             </div>
             <p className="max-w-sm font-mono text-xs font-bold text-[#5de2a5]">STATUS: ALL SYSTEMS LOUD</p>
           </div>
@@ -452,17 +489,26 @@ export default function SlideDemoPage() {
           <div className="grid flex-1 gap-4 lg:grid-cols-[1.25fr_0.75fr]">
             <div className="border-[3px] border-[#fffdf5] bg-[#1c1c1c] shadow-[8px_8px_0_#5b8cff]">
               <div className="flex items-center gap-2 border-b-[3px] border-[#fffdf5] bg-[#5b8cff] px-4 py-3 text-black">
-                <StatusDot className="bg-[#ff5c5c]" /><StatusDot className="bg-[#ffe75c]" /><StatusDot className="bg-[#5de2a5]" />
+                <StatusDot className="bg-[#ff5c5c]" />
+                <StatusDot className="bg-[#ffe75c]" />
+                <StatusDot className="bg-[#5de2a5]" />
                 <span className="ml-3 font-mono text-xs font-black">launch.tsx</span>
               </div>
               <pre className="overflow-hidden p-5 font-mono text-xs font-bold leading-loose sm:text-sm md:text-base">
                 <code>
-                  <span className="text-[#5b8cff]">const</span> idea = <span className="text-[#ffe75c]">{`{`}</span>{"\n"}
-                  {"  "}<span className="text-[#5de2a5]">problem</span>: <span className="text-[#5de2a5]">&quot;too much talking&quot;</span>,{"\n"}
-                  {"  "}<span className="text-[#5de2a5]">prototype</span>: <span className="text-[#5de2a5]">true</span>,{"\n"}
-                  {"  "}<span className="text-[#5de2a5]">deadline</span>: <span className="text-[#5de2a5]">&quot;Friday&quot;</span>,{"\n"}
+                  <span className="text-[#5b8cff]">const</span> idea = <span className="text-[#ffe75c]">{`{`}</span>
+                  {"\n"}
+                  {"  "}
+                  <span className="text-[#5de2a5]">problem</span>:{" "}
+                  <span className="text-[#5de2a5]">&quot;too much talking&quot;</span>,{"\n"}
+                  {"  "}
+                  <span className="text-[#5de2a5]">prototype</span>: <span className="text-[#5de2a5]">true</span>,{"\n"}
+                  {"  "}
+                  <span className="text-[#5de2a5]">deadline</span>:{" "}
+                  <span className="text-[#5de2a5]">&quot;Friday&quot;</span>,{"\n"}
                   <span className="text-[#ffe75c]">{`}`}</span>;{"\n\n"}
-                  <span className="text-[#5b8cff]">await</span> ship(idea); <span className="text-zinc-500">{"// no meeting"}</span>
+                  <span className="text-[#5b8cff]">await</span> ship(idea);{" "}
+                  <span className="text-zinc-500">{"// no meeting"}</span>
                 </code>
               </pre>
             </div>
@@ -472,11 +518,19 @@ export default function SlideDemoPage() {
                 <Terminal className="size-4" /> TERMINAL
               </div>
               <div className="flex-1 space-y-4 bg-black p-5 font-mono text-xs font-bold text-[#fffdf5] md:text-sm">
-                <p><span className="text-[#ffe75c]">➜</span> npm run brave</p>
+                <p>
+                  <span className="text-[#ffe75c]">➜</span> npm run brave
+                </p>
                 <p className="text-zinc-400">checking assumptions...</p>
-                <p><span className="bg-[#5de2a5] px-1 text-black">PASS</span> problem is real</p>
-                <p><span className="bg-[#5de2a5] px-1 text-black">PASS</span> demo is clear</p>
-                <p><span className="bg-[#ff5c5c] px-1 text-black">FAIL</span> logo is 2px off</p>
+                <p>
+                  <span className="bg-[#5de2a5] px-1 text-black">PASS</span> problem is real
+                </p>
+                <p>
+                  <span className="bg-[#5de2a5] px-1 text-black">PASS</span> demo is clear
+                </p>
+                <p>
+                  <span className="bg-[#ff5c5c] px-1 text-black">FAIL</span> logo is 2px off
+                </p>
                 <p className="border-t border-zinc-700 pt-4 text-[#5de2a5]">Ship anyway? Y</p>
               </div>
             </div>
@@ -487,7 +541,9 @@ export default function SlideDemoPage() {
           <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
             <div>
               <Eyebrow className="bg-[#ff5c5c]">Work in motion</Eyebrow>
-              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.05em] md:text-7xl">Make progress visible.</h2>
+              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.05em] md:text-7xl">
+                Make progress visible.
+              </h2>
             </div>
             <div className="flex gap-2 font-mono text-xs font-black">
               <span className="border-[3px] border-black bg-[#5de2a5] px-3 py-2">8 DONE</span>
@@ -527,7 +583,8 @@ export default function SlideDemoPage() {
             ].map((column) => (
               <BrutalCard key={column.title} className={`p-4 ${column.color}`}>
                 <div className="flex items-center justify-between border-b-[3px] border-black pb-3 font-mono text-sm font-black">
-                  <span>{column.title}</span><span>{column.count}</span>
+                  <span>{column.title}</span>
+                  <span>{column.count}</span>
                 </div>
                 <div className="mt-4 space-y-3">
                   {column.cards.map(([title, tag, avatar], index) => (
@@ -537,7 +594,9 @@ export default function SlideDemoPage() {
                         <MousePointer2 className="size-5 shrink-0" />
                       </div>
                       <div className="mt-6 flex items-center justify-between">
-                        <span className="border-[3px] border-black bg-[#ff5c5c] px-2 py-1 font-mono text-[10px] font-black">{tag}</span>
+                        <span className="border-[3px] border-black bg-[#ff5c5c] px-2 py-1 font-mono text-[10px] font-black">
+                          {tag}
+                        </span>
                         <AvatarBadge size="sm">{avatar}</AvatarBadge>
                       </div>
                     </BrutalCard>
@@ -552,8 +611,14 @@ export default function SlideDemoPage() {
           <div className="grid flex-1 gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
             <div>
               <Eyebrow className="bg-[#5b8cff]">Choose with evidence</Eyebrow>
-              <h2 className="mt-5 text-5xl font-black uppercase leading-[0.88] tracking-[-0.06em] md:text-7xl">Taste starts.<br />Criteria decides.</h2>
-              <p className="mt-5 max-w-lg text-lg font-bold">Гоё харагдах нь эхлэл. Хэрэглэгч ойлгож, баг хийж, бизнес хэмжиж чадах ёстой.</p>
+              <h2 className="mt-5 text-5xl font-black uppercase leading-[0.88] tracking-[-0.06em] md:text-7xl">
+                Taste starts.
+                <br />
+                Criteria decides.
+              </h2>
+              <p className="mt-5 max-w-lg text-lg font-bold">
+                Гоё харагдах нь эхлэл. Хэрэглэгч ойлгож, баг хийж, бизнес хэмжиж чадах ёстой.
+              </p>
               <div className="mt-6 flex flex-wrap gap-2 font-mono text-xs font-black">
                 <span className="border-[3px] border-black bg-[#5de2a5] px-3 py-2">● STRONG</span>
                 <span className="border-[3px] border-black bg-[#ff5c5c] px-3 py-2">● RISK</span>
@@ -562,7 +627,10 @@ export default function SlideDemoPage() {
 
             <BrutalCard className="overflow-hidden">
               <div className="grid grid-cols-[1.25fr_repeat(3,0.65fr)] border-b-[3px] border-black bg-black font-mono text-xs font-black text-[#fffdf5]">
-                <span className="p-3">CONCEPT</span><span className="border-l-[3px] border-black p-3 text-center">CLEAR</span><span className="border-l-[3px] border-black p-3 text-center">FAST</span><span className="border-l-[3px] border-black p-3 text-center">BOLD</span>
+                <span className="p-3">CONCEPT</span>
+                <span className="border-l-[3px] border-black p-3 text-center">CLEAR</span>
+                <span className="border-l-[3px] border-black p-3 text-center">FAST</span>
+                <span className="border-l-[3px] border-black p-3 text-center">BOLD</span>
               </div>
               {[
                 ["A · Safe update", true, true, false, "bg-white"],
@@ -570,7 +638,10 @@ export default function SlideDemoPage() {
                 ["C · AI everything", false, false, true, "bg-[#ff5c5c]"],
                 ["D · New workflow", true, false, true, "bg-[#5b8cff]"],
               ].map(([name, clear, fast, bold, color]) => (
-                <div key={String(name)} className={`grid grid-cols-[1.25fr_repeat(3,0.65fr)] border-b-[3px] border-black last:border-b-0 ${color}`}>
+                <div
+                  key={String(name)}
+                  className={`grid grid-cols-[1.25fr_repeat(3,0.65fr)] border-b-[3px] border-black last:border-b-0 ${color}`}
+                >
                   <span className="p-4 text-lg font-black">{String(name)}</span>
                   {[clear, fast, bold].map((value, index) => (
                     <span key={index} className="grid place-items-center border-l-[3px] border-black p-4">
@@ -580,7 +651,10 @@ export default function SlideDemoPage() {
                 </div>
               ))}
               <div className="flex items-center justify-between bg-[#ffe75c] p-4 font-black">
-                <span>WINNER</span><span className="border-[3px] border-black bg-black px-3 py-1 font-mono text-sm text-[#fffdf5]">B · 3/3</span>
+                <span>WINNER</span>
+                <span className="border-[3px] border-black bg-black px-3 py-1 font-mono text-sm text-[#fffdf5]">
+                  B · 3/3
+                </span>
               </div>
             </BrutalCard>
           </div>
@@ -599,7 +673,9 @@ export default function SlideDemoPage() {
             <BrutalCard className="flex min-h-0 flex-col justify-between p-5">
               <div>
                 <p className="font-mono text-xs font-black uppercase">Question of the day</p>
-                <h3 className="mt-3 text-3xl font-black leading-tight md:text-4xl">Таны дараагийн deck-д хамгийн их дутагдаж байгаа зүйл?</h3>
+                <h3 className="mt-3 text-3xl font-black leading-tight md:text-4xl">
+                  Таны дараагийн deck-д хамгийн их дутагдаж байгаа зүйл?
+                </h3>
               </div>
               <div className="mt-6 space-y-3">
                 {[
@@ -611,7 +687,11 @@ export default function SlideDemoPage() {
                   <div key={String(letter)} className="relative overflow-hidden border-[3px] border-black bg-white">
                     <div className={`absolute inset-y-0 left-0 ${color}`} style={{ width: `${width}%` }} />
                     <div className="relative flex items-center justify-between px-3 py-1.5 font-black">
-                      <span><span className="mr-3 font-mono">{letter}</span>{label}</span><span>{width}%</span>
+                      <span>
+                        <span className="mr-3 font-mono">{letter}</span>
+                        {label}
+                      </span>
+                      <span>{width}%</span>
                     </div>
                   </div>
                 ))}
@@ -628,7 +708,11 @@ export default function SlideDemoPage() {
                 <p className="font-mono text-xs font-black text-[#ffe75c]">ROOM_NOTE</p>
                 <p className="mt-3 text-xl font-black leading-tight">“Safe” гэдэг нь үргэлж “clear” гэсэн үг биш.</p>
                 <div className="mt-6 flex -space-x-2">
-                  {["Э", "С", "М", "+39"].map((name) => <AvatarBadge key={name} size="sm" className="size-9 border-[3px] border-black bg-[#ff5c5c]">{name}</AvatarBadge>)}
+                  {["Э", "С", "М", "+39"].map((name) => (
+                    <AvatarBadge key={name} size="sm" className="size-9 border-[3px] border-black bg-[#ff5c5c]">
+                      {name}
+                    </AvatarBadge>
+                  ))}
                 </div>
               </BrutalCard>
             </div>
@@ -644,19 +728,54 @@ export default function SlideDemoPage() {
 
           <div className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-4 md:grid-cols-3">
             {[
-              ["START", "$0", "Нэг санаагаа test хий", ["3 boards", "Core components", "Public share"], "bg-[#fffdf5]", ""],
-              ["MAKE", "$19", "Багаараа хурдан ship хий", ["Unlimited boards", "Live workshop", "Decision log"], "bg-[#5b8cff]", "-rotate-1 md:-translate-y-4"],
-              ["SCALE", "$49", "Системээ олон багт түгээ", ["Custom library", "Team analytics", "Priority support"], "bg-[#ff5c5c]", "rotate-1"],
+              [
+                "START",
+                "$0",
+                "Нэг санаагаа test хий",
+                ["3 boards", "Core components", "Public share"],
+                "bg-[#fffdf5]",
+                "",
+              ],
+              [
+                "MAKE",
+                "$19",
+                "Багаараа хурдан ship хий",
+                ["Unlimited boards", "Live workshop", "Decision log"],
+                "bg-[#5b8cff]",
+                "-rotate-1 md:-translate-y-4",
+              ],
+              [
+                "SCALE",
+                "$49",
+                "Системээ олон багт түгээ",
+                ["Custom library", "Team analytics", "Priority support"],
+                "bg-[#ff5c5c]",
+                "rotate-1",
+              ],
             ].map(([name, price, desc, features, color, transform]) => (
               <BrutalCard key={String(name)} className={`p-4 shadow-[8px_8px_0_#111] ${color} ${transform}`}>
                 <div className="flex items-center justify-between">
                   <p className="font-mono text-sm font-black">{String(name)}</p>
-                  {name === "MAKE" && <span className="border-[3px] border-black bg-[#ffe75c] px-2 py-1 font-mono text-[10px] font-black">MOST BRAVE</span>}
+                  {name === "MAKE" && (
+                    <span className="border-[3px] border-black bg-[#ffe75c] px-2 py-1 font-mono text-[10px] font-black">
+                      MOST BRAVE
+                    </span>
+                  )}
                 </div>
-                <p className="mt-4 text-5xl font-black tracking-[-0.08em]">{String(price)}<span className="text-base tracking-normal">/mo</span></p>
+                <p className="mt-4 text-5xl font-black tracking-[-0.08em]">
+                  {String(price)}
+                  <span className="text-base tracking-normal">/mo</span>
+                </p>
                 <p className="mt-2 min-h-10 text-base font-bold">{String(desc)}</p>
                 <ul className="mt-4 space-y-2 border-t-[3px] border-black pt-3 text-sm font-bold">
-                  {(features as string[]).map((feature) => <li key={feature} className="flex items-center gap-2"><span className="grid size-5 place-items-center border-[3px] border-black bg-[#5de2a5]"><Check className="size-3" strokeWidth={4} /></span>{feature}</li>)}
+                  {(features as string[]).map((feature) => (
+                    <li key={feature} className="flex items-center gap-2">
+                      <span className="grid size-5 place-items-center border-[3px] border-black bg-[#5de2a5]">
+                        <Check className="size-3" strokeWidth={4} />
+                      </span>
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
                 <div className="mt-4 flex items-center justify-between border-[3px] border-black bg-black px-4 py-3 font-black text-[#fffdf5]">
                   Choose {String(name).toLowerCase()} <ArrowUpRight className="size-5" />
@@ -668,7 +787,9 @@ export default function SlideDemoPage() {
 
         <Slide number="14" label="Checkpoint / CTA" totalSlides={totalSlides}>
           <div className="absolute -bottom-20 -right-14 size-72 rotate-12 border-[3px] border-black bg-[#5b8cff] shadow-[10px_10px_0_#111]" />
-          <div className="absolute -right-2 top-24 hidden rotate-6 border-[3px] border-black bg-[#ff5c5c] px-6 py-3 font-mono text-sm font-black shadow-[5px_5px_0_#111] md:block">NO MORE BORING DECKS</div>
+          <div className="absolute -right-2 top-24 hidden rotate-6 border-[3px] border-black bg-[#ff5c5c] px-6 py-3 font-mono text-sm font-black shadow-[5px_5px_0_#111] md:block">
+            NO MORE BORING DECKS
+          </div>
 
           <div className="grid flex-1 items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
@@ -694,7 +815,11 @@ export default function SlideDemoPage() {
                   "Төгсгөлд action асуу",
                 ].map((item, index) => (
                   <li key={item} className="flex items-center gap-3 border-b-2 border-black pb-3 last:border-0">
-                    <span className={`grid size-8 shrink-0 place-items-center border-[3px] border-black ${index % 2 ? "bg-[#5b8cff]" : "bg-[#5de2a5]"}`}><Check className="size-5" strokeWidth={4} /></span>
+                    <span
+                      className={`grid size-8 shrink-0 place-items-center border-[3px] border-black ${index % 2 ? "bg-[#5b8cff]" : "bg-[#5de2a5]"}`}
+                    >
+                      <Check className="size-5" strokeWidth={4} />
+                    </span>
                     {item}
                   </li>
                 ))}
@@ -717,16 +842,16 @@ export default function SlideDemoPage() {
                 Design for someone.
               </h2>
             </div>
-            <p className="max-w-sm font-mono text-xs font-black uppercase">
-              Persona · Goals · Friction · Context
-            </p>
+            <p className="max-w-sm font-mono text-xs font-black uppercase">Persona · Goals · Friction · Context</p>
           </div>
 
           <div className="grid flex-1 gap-4 lg:grid-cols-[0.72fr_1.28fr]">
             <BrutalCard className="flex flex-col justify-between p-5">
               <div>
                 <div className="flex items-start justify-between">
-                  <AvatarBadge size="lg" className="bg-[#ff5c5c] shadow-[5px_5px_0_#111]">Н</AvatarBadge>
+                  <AvatarBadge size="lg" className="bg-[#ff5c5c] shadow-[5px_5px_0_#111]">
+                    Н
+                  </AvatarBadge>
                   <div className="flex items-center gap-1 border-[3px] border-black bg-[#ffe75c] px-2 py-1 font-mono text-xs font-black">
                     <Star className="size-4 fill-black" /> 4.8
                   </div>
@@ -743,8 +868,10 @@ export default function SlideDemoPage() {
               </div>
 
               <div className="flex flex-wrap gap-2 font-mono text-[10px] font-black">
-                {['FIGMA', 'REMOTE', 'FAST MOVER', 'NO MEETINGS'].map((tag) => (
-                  <span key={tag} className="border-[3px] border-black bg-[#5de2a5] px-2 py-1">{tag}</span>
+                {["FIGMA", "REMOTE", "FAST MOVER", "NO MEETINGS"].map((tag) => (
+                  <span key={tag} className="border-[3px] border-black bg-[#5de2a5] px-2 py-1">
+                    {tag}
+                  </span>
                 ))}
               </div>
             </BrutalCard>
@@ -833,9 +960,7 @@ export default function SlideDemoPage() {
                 <CalendarDays className="size-4" aria-hidden="true" />
                 Editorial rhythm
               </Eyebrow>
-              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.055em] md:text-7xl">
-                Time is a layout.
-              </h2>
+              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.055em] md:text-7xl">Time is a layout.</h2>
             </div>
             <div className="border-[3px] border-black bg-[#5de2a5] px-4 py-2 font-mono text-xs font-black shadow-[4px_4px_0_#111]">
               WEEK 32 · 5 OUTPUTS
@@ -850,7 +975,11 @@ export default function SlideDemoPage() {
               { day: "THU", date: "13", focus: "TEST", event: "5 interviews", time: "11:00", color: "bg-[#5de2a5]" },
               { day: "FRI", date: "14", focus: "DECIDE", event: "Ship / kill", time: "16:00", color: "bg-[#fffdf5]" },
             ].map((item, index) => (
-              <BrutalCard key={item.day} shadow="sm" className={`flex flex-col p-3 ${item.color} ${index === 2 ? "md:-translate-y-2" : ""}`}>
+              <BrutalCard
+                key={item.day}
+                shadow="sm"
+                className={`flex flex-col p-3 ${item.color} ${index === 2 ? "md:-translate-y-2" : ""}`}
+              >
                 <div className="flex items-start justify-between border-b-[3px] border-black pb-3 font-mono font-black">
                   <span className="text-xs">{item.day}</span>
                   <span className="text-4xl leading-none">{item.date}</span>
@@ -901,11 +1030,15 @@ export default function SlideDemoPage() {
                     <span className="absolute -top-8 left-1/2 h-8 w-[5px] -translate-x-1/2 bg-black" />
                     <div className="flex items-center justify-between">
                       <p className="font-mono text-[9px] font-black">{team}</p>
-                      <AvatarBadge size="sm" className="bg-[#fffdf5]">{avatar}</AvatarBadge>
+                      <AvatarBadge size="sm" className="bg-[#fffdf5]">
+                        {avatar}
+                      </AvatarBadge>
                     </div>
                     <p className="mt-5 text-xl font-black">{owner}</p>
                     <p className="mt-1 text-xs font-bold">{job}</p>
-                    <div className="mt-5 border-t-2 border-black pt-2 font-mono text-[9px] font-black">OWNS THE DECISION</div>
+                    <div className="mt-5 border-t-2 border-black pt-2 font-mono text-[9px] font-black">
+                      OWNS THE DECISION
+                    </div>
                   </BrutalCard>
                 ))}
               </div>
@@ -924,7 +1057,9 @@ export default function SlideDemoPage() {
                 Feedback needs triage.
               </h2>
             </div>
-            <span className="border-[3px] border-black bg-[#5de2a5] px-3 py-2 font-mono text-xs font-black shadow-[4px_4px_0_#111]">12 UNREAD</span>
+            <span className="border-[3px] border-black bg-[#5de2a5] px-3 py-2 font-mono text-xs font-black shadow-[4px_4px_0_#111]">
+              12 UNREAD
+            </span>
           </div>
 
           <div className="grid flex-1 gap-4 lg:grid-cols-[0.82fr_1.18fr]">
@@ -940,10 +1075,16 @@ export default function SlideDemoPage() {
                   ["Билгүүн", "Mobile дээр товч харагдахгүй", "1h", "bg-[#ffe75c]"],
                   ["Mika", "Can I invite a client?", "3h", "bg-[#fffdf5]"],
                 ].map(([name, message, time, color], index) => (
-                  <div key={name} className={`flex items-center gap-3 p-3 ${index === 0 ? "bg-[#ff5c5c]/20" : "bg-[#fffdf5]"}`}>
+                  <div
+                    key={name}
+                    className={`flex items-center gap-3 p-3 ${index === 0 ? "bg-[#ff5c5c]/20" : "bg-[#fffdf5]"}`}
+                  >
                     <AvatarBadge className={`size-10 ${color}`}>{String(name).slice(0, 1)}</AvatarBadge>
                     <div className="min-w-0 flex-1">
-                      <div className="flex justify-between gap-2 font-mono text-[10px] font-black"><span>{name}</span><span>{time}</span></div>
+                      <div className="flex justify-between gap-2 font-mono text-[10px] font-black">
+                        <span>{name}</span>
+                        <span>{time}</span>
+                      </div>
                       <p className="truncate text-sm font-bold">{message}</p>
                     </div>
                   </div>
@@ -953,22 +1094,33 @@ export default function SlideDemoPage() {
 
             <BrutalCard shadow="none" className="bg-black p-5 text-[#fffdf5] shadow-[7px_7px_0_#5b8cff]">
               <div className="flex items-center justify-between border-b border-zinc-700 pb-3 font-mono text-xs font-black">
-                <span className="flex items-center gap-2"><Mail className="size-4 text-[#5de2a5]" /> FEEDBACK_284</span>
+                <span className="flex items-center gap-2">
+                  <Mail className="size-4 text-[#5de2a5]" /> FEEDBACK_284
+                </span>
                 <span>2 MIN AGO</span>
               </div>
               <div className="mt-5 flex items-center gap-3">
                 <AvatarBadge className="border-[#fffdf5] bg-[#ff5c5c] text-xl">О</AvatarBadge>
-                <div><p className="text-xl font-black">Од · Team admin</p><p className="font-mono text-[10px] text-zinc-400">PRO PLAN · 8 MONTHS</p></div>
+                <div>
+                  <p className="text-xl font-black">Од · Team admin</p>
+                  <p className="font-mono text-[10px] text-zinc-400">PRO PLAN · 8 MONTHS</p>
+                </div>
               </div>
-              <p className="mt-6 text-2xl font-black leading-tight md:text-3xl">“Export дарсны дараа юу болсон нь мэдэгдэхгүй байна.”</p>
+              <p className="mt-6 text-2xl font-black leading-tight md:text-3xl">
+                “Export дарсны дараа юу болсон нь мэдэгдэхгүй байна.”
+              </p>
               <div className="mt-6 grid grid-cols-3 gap-2 text-center font-mono text-[10px] font-black text-black">
                 <span className="border-[3px] border-[#fffdf5] bg-[#ff5c5c] p-2">SEVERITY 8</span>
                 <span className="border-[3px] border-[#fffdf5] bg-[#ffe75c] p-2">FREQ 14×</span>
                 <span className="border-[3px] border-[#fffdf5] bg-[#5de2a5] p-2">FIX 2H</span>
               </div>
               <div className="mt-5 flex gap-3">
-                <div className="flex flex-1 items-center justify-center gap-2 border-[3px] border-[#fffdf5] bg-[#5de2a5] px-3 py-2 font-black text-black"><ThumbsUp className="size-4" /> Prioritize</div>
-                <div className="grid size-11 place-items-center border-[3px] border-[#fffdf5] bg-[#5b8cff] text-black"><Send className="size-5" /></div>
+                <div className="flex flex-1 items-center justify-center gap-2 border-[3px] border-[#fffdf5] bg-[#5de2a5] px-3 py-2 font-black text-black">
+                  <ThumbsUp className="size-4" /> Prioritize
+                </div>
+                <div className="grid size-11 place-items-center border-[3px] border-[#fffdf5] bg-[#5b8cff] text-black">
+                  <Send className="size-5" />
+                </div>
               </div>
             </BrutalCard>
           </div>
@@ -981,25 +1133,39 @@ export default function SlideDemoPage() {
                 <GitCompareArrows className="size-4" aria-hidden="true" />
                 Transformation
               </Eyebrow>
-              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.055em] md:text-7xl">
-                Compare the state.
-              </h2>
+              <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.055em] md:text-7xl">Compare the state.</h2>
             </div>
             <p className="font-mono text-xs font-black">NOT THE DECORATION → THE OUTCOME</p>
           </div>
 
           <div className="grid flex-1 gap-4 lg:grid-cols-2">
             <BrutalCard className="bg-[#ff5c5c] p-4">
-              <div className="mb-3 flex items-center justify-between font-mono text-xs font-black"><span>BEFORE</span><span>14 CLICKS</span></div>
+              <div className="mb-3 flex items-center justify-between font-mono text-xs font-black">
+                <span>BEFORE</span>
+                <span>14 CLICKS</span>
+              </div>
               <div className="border-[3px] border-black bg-[#fffdf5]">
-                <div className="flex items-center gap-2 border-b-[3px] border-black p-3"><StatusDot className="bg-[#ff5c5c]" /><StatusDot className="bg-[#ffe75c]" /><StatusDot className="bg-[#5de2a5]" /><span className="ml-auto font-mono text-[10px] font-black">settings_v1</span></div>
+                <div className="flex items-center gap-2 border-b-[3px] border-black p-3">
+                  <StatusDot className="bg-[#ff5c5c]" />
+                  <StatusDot className="bg-[#ffe75c]" />
+                  <StatusDot className="bg-[#5de2a5]" />
+                  <span className="ml-auto font-mono text-[10px] font-black">settings_v1</span>
+                </div>
                 <div className="grid grid-cols-[0.4fr_1fr] gap-3 p-4">
                   <div className="space-y-2 border-r-[3px] border-black pr-3">
-                    {["Profile", "Workspace", "Billing", "Security", "Advanced"].map((item) => <div key={item} className="border-2 border-black bg-zinc-200 p-2 font-mono text-[9px] font-black">{item}</div>)}
+                    {["Profile", "Workspace", "Billing", "Security", "Advanced"].map((item) => (
+                      <div key={item} className="border-2 border-black bg-zinc-200 p-2 font-mono text-[9px] font-black">
+                        {item}
+                      </div>
+                    ))}
                   </div>
                   <div className="space-y-3">
                     <p className="text-xl font-black">Export workspace data</p>
-                    {[78, 55, 88, 42].map((width) => <div key={width} className="h-6 border-2 border-black bg-zinc-200"><div className="h-full bg-zinc-400" style={{ width: `${width}%` }} /></div>)}
+                    {[78, 55, 88, 42].map((width) => (
+                      <div key={width} className="h-6 border-2 border-black bg-zinc-200">
+                        <div className="h-full bg-zinc-400" style={{ width: `${width}%` }} />
+                      </div>
+                    ))}
                     <div className="border-[3px] border-black bg-zinc-300 p-2 text-center font-bold">Submit</div>
                   </div>
                 </div>
@@ -1008,15 +1174,27 @@ export default function SlideDemoPage() {
             </BrutalCard>
 
             <BrutalCard className="bg-[#5de2a5] p-4">
-              <div className="mb-3 flex items-center justify-between font-mono text-xs font-black"><span>AFTER</span><span>3 CLICKS</span></div>
+              <div className="mb-3 flex items-center justify-between font-mono text-xs font-black">
+                <span>AFTER</span>
+                <span>3 CLICKS</span>
+              </div>
               <div className="border-[3px] border-black bg-[#fffdf5]">
-                <div className="flex items-center gap-2 border-b-[3px] border-black bg-[#5b8cff] p-3"><StatusDot className="bg-[#ff5c5c]" /><StatusDot className="bg-[#ffe75c]" /><StatusDot className="bg-[#5de2a5]" /><span className="ml-auto font-mono text-[10px] font-black">export_v2</span></div>
+                <div className="flex items-center gap-2 border-b-[3px] border-black bg-[#5b8cff] p-3">
+                  <StatusDot className="bg-[#ff5c5c]" />
+                  <StatusDot className="bg-[#ffe75c]" />
+                  <StatusDot className="bg-[#5de2a5]" />
+                  <span className="ml-auto font-mono text-[10px] font-black">export_v2</span>
+                </div>
                 <div className="p-5">
                   <p className="font-mono text-[10px] font-black">EXPORT WORKSPACE</p>
                   <p className="mt-2 text-3xl font-black">Your file is ready.</p>
                   <p className="mt-2 text-sm font-bold">24 boards · 188 MB · ZIP</p>
-                  <div className="mt-5 flex items-center justify-between border-[3px] border-black bg-[#ffe75c] px-4 py-3 font-black shadow-[4px_4px_0_#111]">Download export <ArrowUpRight className="size-5" /></div>
-                  <div className="mt-4 flex items-center gap-2 text-sm font-bold"><CheckCircle2 className="size-5 text-[#05a85c]" /> We also emailed the link to you.</div>
+                  <div className="mt-5 flex items-center justify-between border-[3px] border-black bg-[#ffe75c] px-4 py-3 font-black shadow-[4px_4px_0_#111]">
+                    Download export <ArrowUpRight className="size-5" />
+                  </div>
+                  <div className="mt-4 flex items-center gap-2 text-sm font-bold">
+                    <CheckCircle2 className="size-5 text-[#05a85c]" /> We also emailed the link to you.
+                  </div>
                 </div>
               </div>
               <p className="mt-4 text-xl font-black">User says: “Done. Next.”</p>
@@ -1035,7 +1213,9 @@ export default function SlideDemoPage() {
                 Show how parts connect.
               </h2>
             </div>
-            <span className="border-[3px] border-black bg-[#ff5c5c] px-3 py-2 font-mono text-xs font-black shadow-[4px_4px_0_#111]">1 CORE · 6 SIGNALS</span>
+            <span className="border-[3px] border-black bg-[#ff5c5c] px-3 py-2 font-mono text-xs font-black shadow-[4px_4px_0_#111]">
+              1 CORE · 6 SIGNALS
+            </span>
           </div>
 
           <BrutalCard className="relative grid flex-1 grid-cols-2 gap-3 overflow-hidden p-4 lg:block">
@@ -1044,7 +1224,11 @@ export default function SlideDemoPage() {
             <div className="absolute left-1/2 top-1/2 hidden h-[5px] w-[60%] -translate-x-1/2 -translate-y-1/2 rotate-90 bg-black lg:block" />
 
             <div className="relative z-20 col-span-2 grid place-items-center border-[3px] border-black bg-black p-5 text-center text-[#fffdf5] shadow-[7px_7px_0_#ff5c5c] lg:absolute lg:left-1/2 lg:top-1/2 lg:size-48 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:rounded-full">
-              <div><Workflow className="mx-auto size-9 text-[#ffe75c]" strokeWidth={3} /><p className="mt-2 font-mono text-xs font-black">CORE IDEA</p><p className="text-2xl font-black">Shared truth</p></div>
+              <div>
+                <Workflow className="mx-auto size-9 text-[#ffe75c]" strokeWidth={3} />
+                <p className="mt-2 font-mono text-xs font-black">CORE IDEA</p>
+                <p className="text-2xl font-black">Shared truth</p>
+              </div>
             </div>
 
             {[
@@ -1055,20 +1239,22 @@ export default function SlideDemoPage() {
               ["TEAM", "One owner", "lg:left-[42%] lg:bottom-[5%]", "bg-[#5b8cff]"],
               ["BUSINESS", "Repeatable", "lg:right-[7%] lg:bottom-[10%]", "bg-[#ff5c5c]"],
             ].map(([label, note, position, color], index) => (
-              <BrutalCard key={label} shadow="sm" className={`relative z-10 p-3 lg:absolute lg:w-44 ${position} ${color}`}>
-                <div className="flex items-center justify-between font-mono text-[9px] font-black"><span>{label}</span><span>0{index + 1}</span></div>
+              <BrutalCard
+                key={label}
+                shadow="sm"
+                className={`relative z-10 p-3 lg:absolute lg:w-44 ${position} ${color}`}
+              >
+                <div className="flex items-center justify-between font-mono text-[9px] font-black">
+                  <span>{label}</span>
+                  <span>0{index + 1}</span>
+                </div>
                 <p className="mt-4 text-xl font-black">{note}</p>
               </BrutalCard>
             ))}
           </BrutalCard>
         </Slide>
 
-        <Slide
-          number="22"
-          label="Finale / Manifesto"
-          totalSlides={totalSlides}
-          tone="ink"
-        >
+        <Slide number="22" label="Finale / Manifesto" totalSlides={totalSlides} tone="ink">
           <div className="absolute -right-14 top-16 hidden size-56 rotate-12 border-[3px] border-[#fffdf5] bg-[#5b8cff] shadow-[10px_10px_0_#ff5c5c] md:block" />
           <div className="grid flex-1 items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
@@ -1089,10 +1275,16 @@ export default function SlideDemoPage() {
                 ["02", "Choose one shape", "Chart, list, map — нэгийг сонго.", "bg-[#ff5c5c]"],
                 ["03", "End with a move", "Үзэгч дараа нь юу хийхийг хэл.", "bg-[#5de2a5]"],
               ].map(([number, title, copy, color], index) => (
-                <div key={number} className={`border-[3px] border-[#fffdf5] p-4 text-black shadow-[6px_6px_0_#fffdf5] ${color} ${index === 1 ? "-translate-x-3" : ""}`}>
+                <div
+                  key={number}
+                  className={`border-[3px] border-[#fffdf5] p-4 text-black shadow-[6px_6px_0_#fffdf5] ${color} ${index === 1 ? "-translate-x-3" : ""}`}
+                >
                   <div className="flex items-start gap-4">
                     <span className="font-mono text-xs font-black">{number}</span>
-                    <div><p className="text-xl font-black uppercase">{title}</p><p className="mt-1 text-sm font-bold">{copy}</p></div>
+                    <div>
+                      <p className="text-xl font-black uppercase">{title}</p>
+                      <p className="mt-1 text-sm font-bold">{copy}</p>
+                    </div>
                   </div>
                 </div>
               ))}

@@ -21,7 +21,7 @@ export function AvatarBadge({
     <span
       data-presentation="avatar-badge"
       className={cn(
-        "inline-grid shrink-0 place-items-center rounded-full border-[3px] border-black bg-[#5b8cff] font-black text-black",
+        "inline-grid shrink-0 place-items-center rounded-full border-[3px] border-presentation-accent bg-presentation-surface font-black text-presentation-ink",
         sizes[size],
         className,
       )}

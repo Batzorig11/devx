@@ -15,7 +15,6 @@ export type TicketCoverSlideProps = {
   lectureNumber: string | number;
   title: ReactNode;
   highlightedTitle: ReactNode;
-  subtitle: ReactNode;
   label?: ReactNode;
   courseName?: ReactNode;
   year?: ReactNode;
@@ -34,7 +33,6 @@ export function TicketCoverSlide({
   lectureNumber,
   title,
   highlightedTitle,
-  subtitle,
   label = "Lecture opening",
   courseName = "DEV-X",
   year = "2026",
@@ -55,7 +53,7 @@ export function TicketCoverSlide({
         <BrutalCard className="grid min-h-0 overflow-hidden p-0 lg:grid-cols-[0.34fr_1fr]">
           <div
             className={cn(
-              "relative flex flex-col justify-between border-b-[3px] border-dashed border-black bg-[#ffe75c] p-5 lg:border-b-0 lg:border-r-[3px]",
+              "relative flex flex-col justify-between border-b-[3px] border-dashed border-presentation-ink bg-presentation-surface p-5 lg:border-b-0 lg:border-r-[3px]",
               stubClassName,
             )}
           >
@@ -65,7 +63,7 @@ export function TicketCoverSlide({
             </div>
             <div className="my-5 lg:my-0">
               <p className="font-mono text-xs font-black">LECTURE</p>
-              <p className="text-[clamp(7rem,16vw,13rem)] font-black leading-[0.7] tracking-[-0.12em] text-[#5b8cff] [-webkit-text-stroke:3px_#111]">
+              <p className="text-[clamp(7rem,16vw,13rem)] font-black leading-[0.7] tracking-[-0.12em] text-presentation-accent [-webkit-text-stroke:3px_var(--presentation-ink)]">
                 {displayLectureNumber}
               </p>
             </div>
@@ -73,17 +71,21 @@ export function TicketCoverSlide({
               <p className="font-mono text-xs font-black">
                 {courseName} · {year}
               </p>
-              <div aria-hidden="true" className="mt-3 flex h-10 gap-1 border-y-[3px] border-black py-1">
+              <div aria-hidden="true" className="mt-3 flex h-10 gap-1 border-y-[3px] border-presentation-ink py-1">
                 {barcodeWidths.map((width, index) => (
-                  <span key={`${width}-${index}`} className="h-full bg-black" style={{ width: `${width * 3}px` }} />
+                  <span
+                    key={`${width}-${index}`}
+                    className="h-full bg-presentation-ink"
+                    style={{ width: `${width * 3}px` }}
+                  />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col justify-between bg-[#fffdf5] p-5 md:p-8">
+          <div className="flex flex-col justify-between bg-presentation-surface p-5 md:p-8">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <Eyebrow className="bg-[#5b8cff]">
+              <Eyebrow>
                 <Rocket className="size-4" aria-hidden="true" />
                 {passLabel}
               </Eyebrow>
@@ -93,14 +95,16 @@ export function TicketCoverSlide({
               <p className="font-mono text-sm font-black uppercase">{kicker}</p>
               <h1 className="mt-3 max-w-5xl text-[2.9rem] font-black uppercase leading-[0.84] tracking-[-0.065em] sm:text-[clamp(3.7rem,8vw,7.5rem)] sm:leading-[0.82] sm:tracking-[-0.075em]">
                 {title}
-                <span className={cn("block text-[#5b8cff]", highlightClassName)}>{highlightedTitle}</span>
+                <span className={cn("block text-presentation-accent", highlightClassName)}>{highlightedTitle}</span>
               </h1>
             </div>
             <div className="grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end">
-              <p className="max-w-2xl border-l-[7px] border-black pl-4 text-lg font-bold md:text-2xl">{subtitle}</p>
+              <p className="max-w-2xl border-l-[7px] border-presentation-ink pl-4 text-lg font-bold md:text-2xl">
+                erxes Academy - DevX
+              </p>
               <div
                 data-presentation="action-label"
-                className="flex items-center gap-3 border-[3px] border-black bg-[#ff5c5c] px-4 py-3 font-mono text-xs font-black shadow-[4px_4px_0_#111]"
+                className="flex items-center gap-3 border-[3px] border-presentation-ink bg-presentation-accent px-4 py-3 font-mono text-xs font-black text-presentation-surface shadow-[4px_4px_0_var(--presentation-ink)]"
               >
                 {actionLabel} <ArrowUpRight className="size-5" aria-hidden="true" />
               </div>

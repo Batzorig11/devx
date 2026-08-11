@@ -16,7 +16,7 @@ export function StatusDot({
       aria-hidden="true"
       data-presentation="status-dot"
       className={cn(
-        "inline-block shrink-0 rounded-full border-2 border-black",
+        "inline-block shrink-0 rounded-full border-2 border-presentation-ink bg-presentation-accent",
         size === "sm" ? "size-3" : "size-4",
         className,
       )}

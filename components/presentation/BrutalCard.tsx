@@ -8,9 +8,9 @@ type BrutalCardProps = ComponentPropsWithoutRef<"div"> & {
 
 const shadows = {
   none: "shadow-none",
-  sm: "shadow-[4px_4px_0_#111]",
-  md: "shadow-[7px_7px_0_#111]",
-  lg: "shadow-[10px_10px_0_#111]",
+  sm: "shadow-[4px_4px_0_var(--presentation-ink)]",
+  md: "shadow-[7px_7px_0_var(--presentation-ink)]",
+  lg: "shadow-[10px_10px_0_var(--presentation-ink)]",
 };
 
 export function BrutalCard({
@@ -21,7 +21,7 @@ export function BrutalCard({
   return (
     <div
       className={cn(
-        "border-[3px] border-black bg-[#fffdf5] text-black",
+        "border-[3px] border-presentation-ink bg-presentation-surface text-presentation-ink",
         shadows[shadow],
         className,
       )}

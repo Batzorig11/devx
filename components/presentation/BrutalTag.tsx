@@ -7,7 +7,7 @@ export function BrutalTag({ className, ...props }: ComponentPropsWithoutRef<"spa
     <span
       data-presentation="tag"
       className={cn(
-        "inline-flex items-center border-2 border-black bg-[#5de2a5] px-2 py-1 font-mono font-black uppercase text-black",
+        "inline-flex items-center border-2 border-presentation-accent bg-presentation-surface px-2 py-1 font-mono font-black uppercase text-presentation-ink",
         className,
       )}
       {...props}

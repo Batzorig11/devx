@@ -20,6 +20,13 @@
   --chart-4: #05e17a;
   --chart-5: #7a83ff;
   --chart-active-dot: #000;
+
+  /* Default presentation palette, established by Lecture 0. */
+  --presentation-ink: #0a1e41;
+  --presentation-accent: #6569df;
+  --presentation-paper: #efeee8;
+  --presentation-surface: #fffdf5;
+  --presentation-ink-muted: rgb(10 30 65 / 8%);
 }
 
 .dark {
@@ -53,6 +60,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-presentation-ink: var(--presentation-ink);
+  --color-presentation-accent: var(--presentation-accent);
+  --color-presentation-paper: var(--presentation-paper);
+  --color-presentation-surface: var(--presentation-surface);
 
   --spacing-boxShadowX: 4px;
   --spacing-boxShadowY: 4px;

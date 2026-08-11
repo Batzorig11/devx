@@ -29,12 +29,12 @@ export function ProgressBar({
       )}
       <div
         className={cn(
-          "h-4 border-[3px] border-black bg-[#fffdf5] p-0.5",
+          "h-4 border-[3px] border-presentation-ink bg-presentation-surface p-0.5",
           trackClassName,
         )}
       >
         <div
-          className={cn("h-full bg-[#5b8cff]", barClassName)}
+          className={cn("h-full bg-presentation-accent", barClassName)}
           style={{ width: `${safeValue}%` }}
         />
       </div>

@@ -1,8 +1,8 @@
 .theme {
-  --lecture-ink: #0a1e41;
-  --lecture-accent: #6569df;
-  --lecture-paper: #efeee8;
-  --lecture-surface: #fffdf5;
+  --lecture-ink: var(--presentation-ink);
+  --lecture-accent: var(--presentation-accent);
+  --lecture-paper: var(--presentation-paper);
+  --lecture-surface: var(--presentation-surface);
 
   color: var(--lecture-ink);
 }

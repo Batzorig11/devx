@@ -10,7 +10,7 @@ export function Callout({ icon, children, className, ...props }: CalloutProps) {
   return (
     <div
       className={cn(
-        "flex gap-3 border-[3px] border-black bg-[#ffe75c] p-3 font-bold text-black",
+        "flex gap-3 border-[3px] border-presentation-ink bg-presentation-surface p-3 font-bold text-presentation-ink",
         className,
       )}
       {...props}

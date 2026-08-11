@@ -34,8 +34,8 @@ export function Slide({
       className={cn(
         "relative flex min-h-dvh w-full flex-col overflow-x-hidden overflow-y-auto px-5 pb-28 pt-5 md:h-dvh md:overflow-hidden md:px-10 md:pt-8",
         tone === "ink"
-          ? "bg-[#111111] text-[#fffdf5] [background-image:none]"
-          : "bg-[#efeee8] text-black [background-image:radial-gradient(circle,#11111114_1px,transparent_1px)] [background-size:22px_22px]",
+          ? "bg-presentation-ink text-presentation-surface [background-image:none]"
+          : "bg-presentation-paper text-presentation-ink [background-image:radial-gradient(circle,var(--presentation-ink-muted)_1px,transparent_1px)] [background-size:22px_22px]",
         className,
       )}
     >

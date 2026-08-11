@@ -96,29 +96,29 @@ export function BreakSlide({
       contentClassName="items-center justify-center text-center"
     >
       <div
-        className={`absolute left-[7%] top-[24%] size-20 -rotate-12 border-[3px] bg-[#5b8cff] shadow-[6px_6px_0_#ff5c5c] md:size-24 ${tone === "ink" ? "border-[#fffdf5]" : "border-black"}`}
+        className={`absolute left-[7%] top-[24%] size-20 -rotate-12 border-[3px] bg-presentation-accent shadow-[6px_6px_0_var(--presentation-ink)] md:size-24 ${tone === "ink" ? "border-presentation-surface" : "border-presentation-ink"}`}
         aria-hidden="true"
       />
       <div
-        className={`absolute bottom-[16%] right-[7%] size-16 rotate-12 rounded-full border-[3px] bg-[#5de2a5] shadow-[5px_5px_0_#ffe75c] md:size-20 ${tone === "ink" ? "border-[#fffdf5]" : "border-black"}`}
+        className={`absolute bottom-[16%] right-[7%] size-16 rotate-12 rounded-full border-[3px] bg-presentation-surface shadow-[5px_5px_0_var(--presentation-ink)] md:size-20 ${tone === "ink" ? "border-presentation-surface" : "border-presentation-ink"}`}
         aria-hidden="true"
       />
 
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center">
-        <Eyebrow className="bg-[#ff5c5c]">
+        <Eyebrow>
           <Coffee className="size-4" aria-hidden="true" />
           Ус · Сунгалт · Амралт
         </Eyebrow>
 
         <p
           data-presentation="label-success"
-          className={`mt-5 font-mono text-sm font-black tracking-[0.18em] ${tone === "ink" ? "text-[#5de2a5]" : "text-black"}`}
+          className={`mt-5 font-mono text-sm font-black tracking-[0.18em] ${tone === "ink" ? "text-presentation-surface" : "text-presentation-ink"}`}
         >
           {isComplete ? "BREAK_OVER" : isRunning ? "COUNTING_DOWN" : "BREAK_TIMER"}
         </p>
 
         <time
-          className={`mt-1 font-mono text-[clamp(5.5rem,17vw,11rem)] font-black leading-[0.82] tracking-[-0.1em] ${tone === "ink" ? "text-[#ffe75c]" : "text-[#5b8cff] [-webkit-text-stroke:3px_#111]"}`}
+          className={`mt-1 font-mono text-[clamp(5.5rem,17vw,11rem)] font-black leading-[0.82] tracking-widest ${tone === "ink" ? "text-presentation-surface" : "text-presentation-accent [-webkit-text-stroke:3px_var(--presentation-ink)]"}`}
           role="timer"
           aria-label={`${minutes} minutes and ${seconds} seconds remaining`}
         >
@@ -126,7 +126,7 @@ export function BreakSlide({
         </time>
 
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <BrutalButton onClick={toggleTimer} aria-pressed={isRunning} className="min-w-44 bg-[#5de2a5] uppercase">
+          <BrutalButton onClick={toggleTimer} aria-pressed={isRunning} className="min-w-44 uppercase">
             {isRunning ? (
               <Pause className="size-5" strokeWidth={3} aria-hidden="true" />
             ) : (
@@ -137,7 +137,7 @@ export function BreakSlide({
           <BrutalButton
             onClick={resetTimer}
             disabled={!isRunning && secondsRemaining === initialSeconds}
-            className={`${tone === "ink" ? "border-[#fffdf5]" : "border-black"} bg-[#fffdf5] uppercase`}
+            className={`${tone === "ink" ? "border-presentation-surface" : "border-presentation-ink"} bg-presentation-surface text-presentation-ink uppercase`}
           >
             <RotateCcw className="size-5" strokeWidth={3} aria-hidden="true" />
             Reset
@@ -145,10 +145,13 @@ export function BreakSlide({
         </div>
 
         <div
-          className={`mt-6 h-5 w-full max-w-2xl overflow-hidden border-[3px] ${tone === "ink" ? "border-[#fffdf5] bg-black" : "border-black bg-[#fffdf5]"}`}
+          className={`mt-6 h-5 w-full max-w-2xl overflow-hidden border-[3px] ${tone === "ink" ? "border-presentation-surface bg-presentation-ink" : "border-presentation-ink bg-presentation-surface"}`}
           aria-hidden="true"
         >
-          <div className="h-full bg-[#5b8cff] transition-[width] duration-200" style={{ width: `${progress}%` }} />
+          <div
+            className="h-full bg-presentation-accent transition-[width] duration-200"
+            style={{ width: `${progress}%` }}
+          />
         </div>
       </div>
     </Slide>

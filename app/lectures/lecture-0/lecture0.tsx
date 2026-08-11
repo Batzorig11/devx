@@ -20,7 +20,7 @@ import styles from "./lecture0.module.css";
 export function Lecture0() {
   return (
     <main
-      className={`${styles.theme} min-h-dvh bg-[#efeee8] font-sans selection:bg-[#6569DF] selection:text-[#fffdf5]`}
+      className={`${styles.theme} min-h-dvh bg-presentation-paper font-sans selection:bg-presentation-accent selection:text-presentation-surface`}
     >
       <SlideDeck>
         <WelcomeSlide />
