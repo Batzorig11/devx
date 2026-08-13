@@ -20,10 +20,11 @@ export const lecturesMetadatas = [{
   {
     id: "lesson-02",
     lectureNumber: "02",
-    title: "Хөгжүүлэлтийн орчин бэлдэх",
-    description: "Terminal, Code Editor, VSCode, Folder vs file.",
+    title: "HTML танилцуулга",
+    description:
+      "HTML гэж юу болох, энгийн document, element, browser болон HTML-ийн түүх.",
     estimatedMinutes: 160,
-    topics: ["Terminal", "Code Editor", "VSCode", "Folder", "File"],
+    topics: ["HTML", "Element", "Browser", "Page structure", "HTML5"],
     lecturePath: "/lectures/lecture-2",
   },
   {
