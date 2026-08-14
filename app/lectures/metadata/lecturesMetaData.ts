@@ -30,10 +30,11 @@ export const lecturesMetadatas = [{
   {
     id: "lesson-03",
     lectureNumber: "03",
-    title: "Хөгжүүлэлтийн орчин бэлдэх",
-    description: "Terminal, Code Editor, VSCode, Folder vs file.",
+    title: "Semantic HTML ба CSS-ийн үндэс",
+    description:
+      "Утга илэрхийлэх HTML бүтэц болон selector, өнгө, хүрээ, spacing, box model-оор анхны загвараа бүтээх.",
     estimatedMinutes: 160,
-    topics: ["Terminal", "Code Editor", "VSCode", "Folder", "File"],
+    topics: ["Semantic HTML", "Class & ID", "CSS", "Selector", "Box model"],
     lecturePath: "/lectures/lecture-3",
   },
   {
